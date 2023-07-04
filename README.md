@@ -5,7 +5,7 @@ CUTIFY is a web-based tool that allows users to shorten long URLs into shorter a
 
 The application is built using the Flask framework, a lightweight and extensible web framework for Python. It utilizes a SQLite database for storing URL mappings and tracking url clicks. The frontend is designed using HTML, CSS, and JavaScript, with support for generating QR codes for shortened URLs. And also other necessary libraries like matplotlib for generating charts for analytics, flask-cache for caching and also flask-limiter for rate limiting etc.
 
-#Features
+# Features
 CUTIFY offers the following features:
 
 Shorten long URLs: Users can input a long URL and generate a shorter, more compact and unique version. The application generates a unique shortcode for each URL, which is used to access the original URL when the shortened link is visited.
