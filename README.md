@@ -58,9 +58,9 @@ To set up the URL Shortener application, follow these steps:
 7. Create database:
    ```
    flask shell
-   ```
+  
    db.create_all()
-   ```
+   
    quit()
    ```
 
