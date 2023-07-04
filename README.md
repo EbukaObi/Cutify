@@ -1,11 +1,11 @@
 # CUTIFY
 
-## Introduction
+# Introduction
 CUTIFY is a web-based tool that allows users to shorten long URLs into shorter and more manageable links. It provides a simple, user-friendly interface to generate short URLs, track clicks, and manage the URLs and also user data.
 
 The application is built using the Flask framework, a lightweight and extensible web framework for Python. It utilizes a SQLite database for storing URL mappings and tracking url clicks. The frontend is designed using HTML, CSS, and JavaScript, with support for generating QR codes for shortened URLs. And also other necessary libraries like matplotlib for generating charts for analytics, flask-cache for caching and also flask-limiter for rate limiting etc.
 
-## Features
+# Features
 CUTIFY offers the following features:
 
 1. **Shorten long URLs:** Users can input a long URL and generate a shorter, more compact and unique version. The application generates a unique shortcode for each URL, which is used to access the original URL when the shortened link is visited.
@@ -18,7 +18,7 @@ CUTIFY offers the following features:
    your shortened URLs with a password 
    for added security. 
 
-## Installation
+# Installation
 To set up the URL Shortener application, follow these steps:
 
 1. Clone the repository:
@@ -70,12 +70,12 @@ To set up the URL Shortener application, follow these steps:
 python app.py
 ```
 
-## Live Link
+# Live Link
 
 Deployed site: [cutify.pythonanywhere.com](https://cutify.pythonanywhere.com/) - hosted via [pythonanywhere](https://www.pythonanywhere.com) 
 
 
-## Usage and How-tos.
+# Usage and How-tos.
 
 This tool can be accessed via the deployed site or a local copy of the project.
 
@@ -100,32 +100,33 @@ features of the application as unauthenticated users are restricted to shortenin
    Below the list, you have the CLEAR HISTORY button that will wipe all your generated URLs from the database (giving 
    you the chance to start afresh and fresh :)
 
-Some other feature soon to be added is the View analytics feature. For each URL in your CUTIFY history, you can view the analytics and monitor how your        shortened URL has been performing.
+Some other feature soon to be added is the View analytics feature. For each URL in your CUTIFY history, you can view the analytics and monitor how your        shortened URL has been performing.<br>
 
-## Code Base Structure
 
-# Authentication
+# Code Base Structure
+
+## Authentication
 Users are required to be logged in to use the website. This is to enable the database to map generated links and QR codes to the specific users who created them; thus making sure that each user can only view, edit or delete the links they created.<br>
 
 Routes: sign up . log in . log out
 If an unauthenticated user tries to access a protected route, they get redirected to the login page with an error message.
 
-# Authorization
+## Authorization
 By including user_id=current_user.id as a parameter in the Link.query.filter_by() function, Scissor ensures that users can only interact with the links they created by themselves when visiting the dashboard, history, analytics, update, delete and QR code generation routes.
 
-# Analytics
+## Analytics
 This page - accessed via https://sciz.site/<short_link>/analytics - shows the details of a specified shortened link and its QR code in the same format as the dashboard but optimized for a single card. <br>
 
 If the link passed into the route does not exist, the 404 template is rendered instead.
 
-## Acknowledgements
+# Acknowledgements
 CUTIFY is built on top of the Flask micro web framework and utilizes various open-source libraries and 
 extensions. The development of this application was inspired by the need for a simple and efficient URL shortening 
 solution. This project was made possible thanks to the Flask community, the contributors of the used extensions, and all the developers 
 involved in creating the underlying technologies. Most especially also the tutors and everyone at [Altschool Africa](https://altschoolafrica.com) for the opportunity to build this application as the capstone project.
 
-## License
+# License
 The CUTIFY application is open source and released under the [MIT License](LICENSE). You are free to use, modify, and distribute the application according to the terms of the license.
 
-## Contributing
+# Contributing
 Contributions to CUTIFY are welcome! If you find any issues or have suggestions for improvements, please feel free to submit a pull request or open an issue on the project's GitHub repository.
