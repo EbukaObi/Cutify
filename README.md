@@ -18,3 +18,55 @@ CUTIFY offers the following features:
    your shortened URLs with a password 
    for added security. 
 
+## Installation
+To set up the URL Shortener application, follow these steps:
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/EbukaObi/Cutify
+   ```
+2. Change into the project directory:
+   ```
+   cd Cutify
+   ```
+3. Create a virtual environment:
+   ```
+   python3 -m venv venv
+   ```
+4. Activate the virtual environment:
+   - On Windows:
+     ```
+     venv\Scripts\activate
+     ```
+   - On macOS/Linux:
+     ```
+     source venv/bin/activate
+     ```
+5. Install the required dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+6. Set environment variable:
+   - On Windows:
+     ```
+     set FLASK_APP=app.py
+     ```
+   - On MacOS/Linux:
+     ```
+     export FLASK_APP=run.py
+     ```
+7. Create database:
+   flask shell
+   ```
+   db.create_all()
+   ```
+   quit()
+   ```
+
+9. To run and use the application locally, follow the steps above and execute this command:
+
+```
+python app.py
+```
+
+
